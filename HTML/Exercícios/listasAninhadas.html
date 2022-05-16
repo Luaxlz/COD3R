@@ -1,0 +1,51 @@
+<h1>Projeto</h1>
+
+
+<ul class="tree">
+    <li>
+         <span pasta>Backend</span>
+        <ul>
+            <li>
+                <span pasta>App</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span pasta>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span pasta>frontend</span>
+        <ul>
+            <span pasta>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[pasta]').forEach(pasta => { /* seletor que pega todos com o identificação [pasta]*/
+        pasta.onclick = function(e){ /* função que é chamada quando clica no elemento encontrado anteriormente*/
+            const ul = pasta.nextElementSibling /* contante que armazena em si o proximo elemento irmão de da função pasta*/
+            const displayAtual = ul.style.display /*constante que armazena o display atual da const ul*/
+            ul.style.display = displayAtual === 'none' ?  'block' : 'none' /* alterna entre os displays block e none*/
+        }
+    })
+</script>

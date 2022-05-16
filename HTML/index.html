@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href="Exercícios/teste.html">00 - Teste</a> |
+        <a href="Exercícios/texto.html">01 - Texto</a> |
+        <a href="Exercícios/texto2.html">02 - Texto 2</a> |
+        <a href="Exercícios/listas.html">03 - Listas</a> |
+        <a href="Exercícios/listasAninhadas.html">04 - Listas Aninhadas</a> |
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de web moderno
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => { /*Intercepta todos os links com a tag 'a' */
+            const conteudo = document.getElementById('conteudo') /*Seta na variável*/
+
+           link.onclick = function(e) { /*Função que será chamada quando o usuário clicar*/
+               e.preventDefault() /* Previne que a acão padrão do evento 'e' aconteça, nesse caso abrir o link */
+               fetch(link.href) /* chamada AJAX de busca a partir do link */
+               .then(resp => resp.text()) /* função then que retorna a resposta nesse caso o conteudo do fetch em forma textual*/
+               .then(html => conteudo.innerHTML = html) /*Pega o html gerado pelo .then anterio e substitui o html da section conteudo*/
+           }
+        });
+    </script>
+</body>
+</html>

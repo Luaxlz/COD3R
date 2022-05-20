@@ -1,0 +1,98 @@
+<div wm-slider>
+    <p>
+        <img src="https://img.quizur.com/f/img5fa59d3d005cc7.58993680.jpg?lastEdited=1604689226" alt="Sakura edit" width="513" height="342" title="Sakura Heart">
+    </p>
+    
+    <p>
+        <img src="https://c.tenor.com/IjbGZdXP80EAAAAM/one-punch-man-saitama.gif" alt="Upset Saitama" height="342" title="Upset Saitama">
+    </p>
+    
+    <p class="circular">
+        <img src="http://pngwebicons.com/uploads/anime/ico/anime_icon6560.ico" alt="Black Lagoon PNG">
+    </p>
+    
+    <p class="texto">
+        <img src="https://img.freepik.com/vetores-gratis/perfil-de-avatar-de-homem-no-icone-redondo_24640-14044.jpg" alt="Avatar" height="50" align="left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis bibendum aliquet. Integer aliquet mauris sit amet orci eleifend aliquet. Donec suscipit eget nibh in pretium. Maecenas luctus a ipsum ut semper. Phasellus id malesuada metus. In elit felis, iaculis non velit ac, eleifend laoreet tellus. Duis in lacus leo. Nam commodo velit felis, vitae tincidunt urna tempus id. Nulla iaculis enim eget leo gravida, in molestie ligula ornare. Sed pellentesque nunc a velit vehicula suscipit. Nam consectetur nibh sit amet libero ultrices aliquam. Fusce auctor vulputate felis eget gravida. Donec tellus nisi, tempor at libero sit amet, laoreet feugiat lectus. Proin non vestibulum mauris.
+    </p>
+    
+    <p>
+        <picture>
+            <source srcset="https://manchanocel.com/wp-content/uploads/2020/11/Jujutsu_kaisen_logo_fr.png"
+                media="(min-width: 600px)">
+            <img src="https://ih1.redbubble.net/image.2003799062.9706/st,small,507x507-pad,600x600,f8f8f8.jpg">
+        </picture>
+    </p>
+</div>
+
+
+<style>
+
+    p {
+        position: absolute;
+        display: none;
+    }
+
+    .circular {
+        width: 513px;
+        background-color: #fff;
+    }
+
+    .texto {
+        width: 600px;
+    }
+    .texto img {
+        margin-right: 10px;
+    }
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('https://kanto.legiaodosherois.com.br/w750-h450-k1/wp-content/uploads/2021/04/legiao_Pen90Dk7lR4o.png.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>
+
+<script>
+   function mover (elem, inicio, fim, passo, callback) { //função que irá mover as imgs
+       const novoInicio = inicio - passo // const que recebe o valor de inicio - passo para poder dar um novo inicio e fazer a imagem se mover
+       if (novoInicio >= fim) { // if para saber se a imagem chegou no fim do curso
+            elem.style.left = novoInicio + 'px' //atribui ao estilo 'esquerdo' da imagem o valor de inicio, assim a imagem irá se mover para a esquerda nesse valor
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 20) //função settimeout que irá dizer de quanto em quanto tempo o sistema irá chamar a função mover
+       } else { //termino da função mover
+           callback() //calback para dizer ao sistema que a função mover chegou ao fim
+       }
+   }
+
+   /*const p = document.querySelector('[wm-slider] > p')
+   p.style.display = 'block'
+   mover(p, 1500, -700, 5, () => {
+       console.log('Terminou!!')
+   })*/
+
+   function slider() { //Função que atribui as imgs a um array para ser o nosso slide
+       const elementos = document.querySelectorAll('[wm-slider] > p') // JQuerry pegando todos os P dentro de wm-slider
+       const slides = Array.from(elementos) // Constante que recebe a const elemntos anterior em forma de array
+       exibirSlide(slides, slides[0]) //chama a função exibirSlide já recebendos o array anterior e já mostrando o slide 0
+   }
+
+   function exibirSlide(slides, slide) { //função para exibir os slides
+       slide.style.display = 'block' //muda o estilo para poder mostrar o slide que originalmente era none
+       const inicio = innerWidth //define para a const inicio o valor da tela
+       const fim = -slide.clientWidth // define para fim o valor negativo da tela
+
+       slide.style.left = `${inicio}px` //define o ponto de partida do movimento como inicio em pixels (px)
+
+       mover(slide, inicio, fim, 5, () => { //chama a função mover com todos os parametros
+            slide.style.display = 'none' //torna o slide invisivel novamente pois já acabou seu movimento
+            exibirSlide (slides, getProximo(slides, slide))//passa os slides que recebemos e chama uma função para encontrar o proximo slide
+       })
+   }
+
+   function getProximo(lista, atual) { // função que recebe a lista e o atual e irá retornar o proximo slide
+    const i = lista.indexOf(atual) + 1 // armazena na cont i index de atual + 1 que será o proximo
+    return i < lista.length ? lista[i] : lista [0] // se o i for menor que o tamanho da lista irá retornar lista com indice i, porém se for igual ou maior que o tamanho do array irá retornar o primei indice que é 0
+   }
+   slider() //starta a função slider
+</script>

@@ -56,7 +56,7 @@
 
 <script>
    function mover (elem, inicio, fim, passo, callback) { //função que irá mover as imgs
-       const novoInicio = inicio - passo // const que recebe o valor de inicio - passo para poder dar um novo inicio e fazer a imagem se mover
+       const novoInicio = inicio - passo // const que recebe o valor de inicio menos o valor de passo para poder dar um novo inicio e fazer a imagem se mover
        if (novoInicio >= fim) { // if para saber se a imagem chegou no fim do curso
             elem.style.left = novoInicio + 'px' //atribui ao estilo 'esquerdo' da imagem o valor de inicio, assim a imagem irá se mover para a esquerda nesse valor
             setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 20) //função settimeout que irá dizer de quanto em quanto tempo o sistema irá chamar a função mover

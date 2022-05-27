@@ -7,7 +7,114 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        * {margin: 0; padding: 0;}
+        .cabecalho {
+            position: relative;
+            background-color: #3d3d3d;
+            font-family: 'Oswald', sans-serif;
+            max-height: 50px;
+            height: 100%;
+            border-bottom: solid 4px #5591ca;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 13px;
+            right:10px;
+            background-color: #616060;
+            border-radius: 5px;
+            width: 45px;
+            height: 30px;
+            color: #fff;
+            font-size: 10px;
+        }
+        @media (max-width: 550px) {.menu-toggle {display: block;}}
+
+        @media (max-width: 680px) {.autenticacao {display: none;}}
+        @media (max-width: 550px) {.menu {display: none;}}
+
+        .logo img {
+           position: relative;
+            margin-left: 10px;
+            margin-top: 5px;
+            width: 200px;
+            height: 40px;
+            /* background-color: red; */
+        }
+
+        .menu {
+            height: 35px;
+            /* background-color: red;  */
+            position: absolute;
+            left: 240px;
+            top: 12px;
+        }
+        
+        .menu ul {
+            list-style: none;
+        }
+        .menu li{
+            display: inline-block;
+            width: 60px;
+        }
+
+        .menu a{
+            display: inline;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 16px;
+            /* font-weight: bold; */
+            color: #fff;
+        }
+
+        .menu a:hover{
+            background-color: #5591ca;
+        }
+
+        .autenticacao {
+            position: absolute;
+            right: 10px;
+            top: 13px;
+        }
+        
+        .autenticacao a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            padding:20px;
+        }
+        
+        .botao {cursor: pointer;}
+        
+        .botao.destaque {
+            border-radius: 100px;
+            padding: 5px 20px;
+            background-color: #df2525;
+        }
+        
+        a.botao.destaque {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        body {
+            background-color: #e2e2e2;
+        }
+
+        footer {
+            bottom: 0;
+            right: 10px;
+            position: absolute;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: rgb(65, 64, 64);
+            font-size: 16px;
+        }
+
     </style>
 </head>
 
@@ -42,7 +149,7 @@
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
-
+    <footer> <a href="https://github.com/Luaxlz"> Made by: Lucas Angeli</a></footer>
     <script>
         // ...
     </script>

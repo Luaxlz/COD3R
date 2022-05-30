@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-principal ul {
+    list-style: none;
+}
+.menu-principal li{
+    position: relative;
+    display: inline-block;
+    max-width: 250px;
+    
+}
+
+.menu-principal a{
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5a5a5a;
+    white-space: nowrap;
+}
+
+.menu-principal a.selected {
+    color: black;
+}

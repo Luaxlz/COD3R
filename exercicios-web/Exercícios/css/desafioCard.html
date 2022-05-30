@@ -5,29 +5,55 @@
     <meta charset="UTF-8">
     <title>Desafio Card</title>
     <style>
-        * {
+        * { 
+            /*Zerando margens e paddins e definindo o box e a fonte*/
             padding: 0;
             margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         .curso {
-            display: inline-block;
-            border-radius: 5px;
-            box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-            padding: 5px 10px;
-            margin: 20px;
-            width: 400px;
-            transition: all 0.3s ease-out;
-            background-color: red;
+            float: left; /*Colocando o curso no lado esquerdo*/
+            border: solid 1px #32323238; /*Definindo a borda do card*/
+            box-shadow: 0px 4px 20px 3px #32323238; /*Definindo a sombra do card*/
+            padding: 5px; /*Definindo o padding do card*/
+            margin: 5px 20px; /*Definindo a margem do card*/
+            max-width: 260px; /*Definindo a largura máxima do card*/
+            max-height: 300px; /*Definindo a altura máxima do card*/
+            width: 100%; /*Definindo a largura do card*/
+            height: 100%; /*Definindo a altura do card*/
+        }
+        .curso-info {
+            padding: 10px; /*Definindo o padding do conteudo do card*/
+            height: 90px; /*Definindo a altura do conteudo do card*/
+            overflow: hidden; /*Definindo que o conteudo do card não vai passar do limite do card*/
+        }
+
+        .curso-info h4 {
+            font-size: 1.4em; /*Definindo o tamanho da fonte do titulo do card*/
+            font-weight: 100; /*Definindo o peso da fonte do titulo do card*/
+            margin: 0; /*Definindo a margem do titulo do card*/
+        }
+
+        .curso-preco {
+            float: right;
+            padding: 10px;
+        }
+
+        .curso img {
+            max-height: 50%; /*Definindo a altura da imagem do card*/
+            width: 100%; /*Definindo a largura da imagem do card*/
         }
 
         .preco-de {
-            color: red;
-            text-decoration: line-through;
+            color: #d30202; /*Definindo a cor do texto do preço antigo do card*/
+            text-decoration: line-through; /*Definindo a linha de tachado do preço antigo do card*/
         }
 
         .preco-por {
-            color: green;
+            color: green; /*Definindo a cor do texto do preço atual do card*/
+            font-size: 1.4em;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -36,7 +62,7 @@
     <h1>Card</h1>
 
     <h2>Objetivo</h2>
-    <img src="http://files.cod3r.com.br/curso-web/card.png" height="340" alt="Objetivo">
+    <img src="http://files.cod3r.com.br/curso-web/card.png" height="340" alt="Objetivo" class="img2">
 
     <h2>Resultado</h2>
     <div>

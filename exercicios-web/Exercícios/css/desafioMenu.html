@@ -68,7 +68,8 @@
             color: #fff;
         }
 
-        .menu a:hover{
+        .menu a:hover,
+        .menu a.selected {
             background-color: #5591ca;
         }
 
@@ -149,9 +150,19 @@
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
+
     <footer> <a href="https://github.com/Luaxlz"> Made by: Lucas Angeli</a></footer>
+
+
     <script>
-        // ...
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldLink = document.querySelector(`.menu a[href="#${oldURL}"]`)
+            const newLink = document.querySelector(`.menu a[href="#${newURL}"]`)
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }
     </script>
 </body>
 

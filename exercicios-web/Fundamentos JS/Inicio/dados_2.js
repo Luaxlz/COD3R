@@ -9,4 +9,4 @@ console.log(precoComDesconto);
 
 let nome = "Caderno"
 let categoria = "Papelaria"
-console.log("Nome: " + nome + ", Categoria: " + categoria);
+console.log("Nome: " + nome + ", Categoria: " + categoria + ", Preço: " + preco + ", Desconto: " + desconto + ", Preço com desconto: " + precoComDesconto);

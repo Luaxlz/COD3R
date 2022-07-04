@@ -14,5 +14,5 @@ comparaComThisArrow(global)
 comparaComThisArrow(module.exports)
 
 comparaComThisArrow = comparaComThisArrow.bind(obj)
-// A Arrow Function tem força quando o assunto é o THIS, nada pode mudar a referencia do this em uma arrow function, nem mesmo a função .bind
+// A Arrow Function tem força quando o assunto é o THIS, nada pode mudar a referencia do this em uma arrow function, nem mesmo a função .bindb
 comparaComThisArrow(obj)

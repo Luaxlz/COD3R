@@ -28,3 +28,18 @@ ferrari.acelerar()
 ferrari.acelerar()
 ferrari.acelerar()
 console.log(ferrari.getVelocidadeAtual())
+
+
+//####################################################3
+function bancoDeHoras (horasAnterior, horasContabilizadas) {
+    let horasTotais = horasAnterior + horasContabilizadas
+    if (horasTotais < 0) {
+        console.log(`Funcionário com banco negativo de ${horasTotais}hrs`)
+    } else if (horasTotais > 0) {
+        console.log(`Funcionário com banco positivo de ${horasTotais}hrs`)
+    } else {
+        console.log("Funcionário não possui banco de horas.")
+    }
+}
+
+bancoDeHoras(3.52, 7.58)

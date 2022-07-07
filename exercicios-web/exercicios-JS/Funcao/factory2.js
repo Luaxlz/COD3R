@@ -3,8 +3,8 @@
 
 function criarProduto(nome, preco) {
     return {
-        nome: nome,
-        preco: preco,
+        nome,
+        preco,
         desconto: 0.5,
         precoFinal: preco * 0.5
     }

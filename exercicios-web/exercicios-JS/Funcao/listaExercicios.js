@@ -193,3 +193,156 @@
 // }
 
 // sistemaNotas(38)
+
+// 10) Crie uma função que verifica se um número inteiro passado como parêmetro é divisível por 3 e retorne true
+// ou false.
+// const verificaDiv3 = (numero) => {
+//     if( numero % 3 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(verificaDiv3(10))
+
+// 11) As regras para o cálculo dos anos bissextos são as seguintes:
+// De 4 em 4 anos é ano bissexto;
+// De 100 em 100 anos não é ano bissexto;
+// De 400 em 400 anos é ano bissexto;
+// Prevalecem as últimas regras sobre as primeiras.
+// Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bissexto, imprimindo no console a
+// mensagem e retornando true ou false.
+// const anoBissexto = (ano) => {
+//     let teste1 = ano % 4
+//     let teste2 = ano % 100
+//     let teste3 = ano % 400
+//     if(teste3 === 0) {
+//         return true
+//     } else if (teste1 === 0 && teste2 !== 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(anoBissexto(2015))
+// console.log(anoBissexto(2016))
+
+// 12) Faça um algoritmo que calcule o fatorial de um número.
+// const fatorial = (numero) => {
+//     let resultado = numero
+//     for(let i = 1; i < numero; i++) {
+//         resultado *= i
+//     }
+//     return resultado
+// }
+
+// console.log( fatorial(5))
+
+// 13) Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao
+// dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.
+// const diaUtil = (dia) => {
+//     if( dia > 0 && dia < 31) {
+//         switch(dia) {
+//             case 1: case 8: case 15: case 22: case 29: case 7: case 14: case 21: case 28:
+//                 return "Fim de semana"
+//                 break
+//             default:
+//                 return "Dia útil"
+//         }
+//     } else {
+//         return "Dia informádo inválido."
+//     }
+// }
+// console.log(diaUtil(20))
+
+// 14) Crie uma estrutura condicional switch que receba uma string com o nome de uma fruta e que possua três
+// casos: Caso maçã, retorne no console: “Não vendemos esta fruta aqui”. Caso kiwi, retorne: “Estamos com
+// escassez de kiwis”. Caso melancia, retorne: “Aqui está, são 3 reais o quilo”. Teste com estas três opções .Crie
+// também um default, que retornará uma mensagem de erro no console.
+// const switchFrutas = (fruta) => {
+//     switch(fruta) {
+//         case "maçã":
+//             return "Não vendemos esta fruta aqui."
+//             break
+//         case "kiwi":
+//             return "Estamos com escassez de kiwis."
+//             break
+//         case "melancia":
+//             return "Aqui está, são 3 reais o quilo."
+//         default:
+//             return "Erro, dado inválido."
+//     }
+// }
+
+// console.log(switchFrutas("kiwi"))
+
+// 15) Um homem decidiu ir à uma revenda comprar um carro. Ele deseja comprar um carro hatch, e a revenda
+// possui, além de carros hatch, sedans, motocicletas e caminhonetes. Utilizando uma estrutura switch, caso o
+// comprador queira o hatch, retorne: “Compra efetuada com sucesso”. Nas outras opções, retorne: “Tem certeza
+// que não prefere este modelo?”. Caso seja especificado um modelo que não está disponível, retorne no console:
+// “Não trabalhamos com este tipo de automóvel aqui”.
+// const revendedora = (modeloCarro) => {
+//         switch(modeloCarro) {
+//             case "hatch":
+//                 return "Compra efetuada com sucesso."
+//                 break
+//             case "sedan": case "motocicleta": case "caminhonete":
+//                 return "Tem certeza que não prefere este modelo?"
+//                 break
+//             default:
+//                 return "Não trabalhamos com este tipo de automóvel aqui."
+//             }
+//     }
+//  console.log(revendedora("ccc"))
+
+// 16) Utilizando a estrutura do Switch faça um programa que simule uma calculadora básicaO programa recebe
+// como parâmetros dois valores numéricos e uma string referente à operação e a realize com os valores numéricos na ordem que foram inseridos. Por exemplo: calculadora (2, ‘+’, 3). A função efetuará a soma de 2 e
+// 3. Dica: Os sinais das operações são: ‘+’. ‘-’, ‘*’ e ‘/’. Crie um caso default para operações inválidas.
+// const calculadora = (num1, operador, num2) => {
+//     switch(operador) {
+//         case "+":
+//             return num1 + num2
+//             break
+//         case "-":
+//             return num1 - num2
+//             break
+//         case "*":
+//             return num1 * num2
+//             break
+//         case "/":
+//             return num1 / num2
+//             break
+//         default:
+//             return "valores inválidos."
+//     }
+// }
+// console.log(calculadora(1, "+", 11))
+
+// 17) Um funcionário irá receber um aumento de acordo com o seu plano de
+// trabalho, de acordo com a tabela abaixo:
+// Plano Aumento
+// A 10%
+// B 15%
+// C 20%
+// Faça uma função que leia o plano de trabalho e o salário atual de um funcionário e calcula e imprime o seu
+// novo salário. Use a estrutura switch e faça um caso default que indique que o plano é inválido.
+// const aumentoSalario = (planoTrabaho, salarioAtual) => {
+//     switch(planoTrabaho) {
+//         case "A": case "a":
+//             return salarioAtual + (salarioAtual * 0.1)
+//             break
+//         case "B": case "b":
+//             return salarioAtual + (salarioAtual * 0.15)
+//             break
+//         case "C": case "c":
+//             return salarioAtual + (salarioAtual * 0.20)
+//             break
+//         default:
+//             return "Plano inválido."
+//     }
+// }
+// console.log(aumentoSalario("c", 1000))
+// console.log(aumentoSalario("A", 1000))
+// console.log(aumentoSalario("B", 1000))
+// console.log(aumentoSalario("fs", 1000))

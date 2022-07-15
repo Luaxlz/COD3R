@@ -346,3 +346,373 @@
 // console.log(aumentoSalario("A", 1000))
 // console.log(aumentoSalario("B", 1000))
 // console.log(aumentoSalario("fs", 1000))
+
+// 18) Faça um programa que leia um número entre 0 e 10, e escreva este número por extenso. Use o comando
+// switch. Crie um case default que escreva ‘Número fora do intervalo.’
+// const extenso = (numero) => {
+//     switch(numero) {
+//         case 0:
+//             return "Zero"
+//             break
+//         case 1:
+//             return "Um"
+//             break
+//         case 2:
+//             return "Dois"
+//             break
+//         case 3:
+//             return "Três"
+//             break
+//         case 4:
+//             return "Quatro"
+//             break
+//         case 5:
+//             return "Cinco"
+//             break
+//         case 6:
+//             return "Seis"
+//             break
+//         case 7:
+//             return "Sete"
+//             break
+//         case 8:
+//             return "Oito"
+//             break
+//         case 9:
+//             return "Nove"
+//             break
+//         case 10:
+//             return "Dez"
+//             break
+//         default:
+//             return "Número fora do intervalo aceito."
+//             break
+//     }
+// }
+// console.log(extenso(0))
+// console.log(extenso(1))
+// console.log(extenso(2))
+// console.log(extenso(3))
+// console.log(extenso(4))
+// console.log(extenso(5))
+// console.log(extenso(6))
+// console.log(extenso(7))
+// console.log(extenso(8))
+// console.log(extenso(9))
+// console.log(extenso(10))
+// console.log(extenso(11))
+
+// 19) O cardápio de uma lanchonete é o seguinte:
+// Código Descrição do Produto Preço
+// 100 Cachorro Quente R$ 3,00
+// 200 Hambúrguer Simples R$ 4,00
+// 300 Cheeseburguer R$ 5,50
+// 400 Bauru R$ 7,50
+// 500 Refrigerante R$ 3,50
+// 600 Suco R$ 2,80
+// Implemente uma função que receba como parâmetros o código do item pedido, a quantidade e calcule o valor
+// a ser pago por aquele lanche. Considere que a cada execução somente será calculado um item. Use o
+// comando switch. Crie um caso default para produto não existente.
+// const aceitaPedido = (codigoItem, qtde) => {
+//     switch(codigoItem) {
+//         case 100:
+//             return `O valor para ${qtde} cachorro(s) quente(s) é de R$${qtde * 3}`
+//             break
+//         case 200:
+//             return `O valor para ${qtde} Hamburquer(es) simples é de R$${qtde * 4}`
+//             break
+//         case 300:
+//             return `O valor para ${qtde} Cheeseburguer(s) é de R$${qtde * 5.5}`
+//             break
+//         case 400:
+//             return `O valor para ${qtde} Bauru(s) é de R$${qtde * 7.5}`
+//             break
+//         case 500:
+//             return `O valor para ${qtde} refrigerante(s) é de R$${qtde * 3.5}`
+//             break
+//         case 600:
+//             return `O valor para ${qtde} Suco(s) é de R$${qtde * 2.8}`
+//             break
+//             default:
+//                 return "Produto não existente."
+//     }
+// }
+// console.log(aceitaPedido(100, 10))
+// console.log(aceitaPedido(200, 10))
+// console.log(aceitaPedido(300, 10))
+// console.log(aceitaPedido(400, 10))
+// console.log(aceitaPedido(500, 10))
+// console.log(aceitaPedido(600, 10))
+// console.log(aceitaPedido(700, 10))
+
+// 20) Crie um programa para informar quais e quantas notas são necessárias para entregar o mínimo de cédulas
+// para um determinado valor informado pelo usuário considerando notas de R$ 100, R$ 50, R$ 10 e R$ 5 e R$ 1.
+// Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar R$18, o programa deve
+// informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas): 1
+// nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
+// const sacarDinheiro = (valorSaque) => {
+//     let contador100 = 0
+//     let contador50 = 0
+//     let contador10 = 0
+//     let contador5 = 0
+//     let contador1 = 0
+//     let valorNota = calculaValorNota(valorSaque)
+//     while (valorSaque >= valorNota) {
+//         switch(valorNota) {
+//             case 100:
+//                 valorSaque -= 100
+//                 contador100++
+//                 break
+//             case 50:
+//                 valorSaque -= 50
+//                 contador50++
+//                 break
+//             case 10:
+//                 valorSaque -= 10
+//                 contador10++
+//                 break
+//             case 5:
+//                 valorSaque -= 5
+//                 contador5++
+//                 break
+//             case 1:
+//                 contador1++
+//                 valorSaque -= 1
+//                 break
+//         }
+//         valorNota = calculaValorNota(valorSaque)
+//     }
+//     return elaboraResultado(contador100, contador50, contador10, contador5, contador1)
+// }
+
+// const calculaValorNota = (valorSaque) => {
+//     if(valorSaque >= 100) {
+//         return 100
+//     } else if(valorSaque >= 50) {
+//         return 50
+//     } else if(valorSaque >= 10) {
+//         return 10
+//     } else if(valorSaque >= 5) {
+//         return 5
+//     } else if (valorSaque >= 1) {
+//         return 1
+//     }
+// }
+
+// const elaboraResultado = (contador100, contador50, contador10, contador5, contador1) => {
+//     let resultado = ""
+//     if (contador100 > 0) {
+//         resultado += `${contador100} nota(s) de R$ 100. `
+//     }
+
+//     if (contador50 > 0) {
+//         resultado += `${contador50} nota(s) de R$ 50. `
+//     }
+
+//     if (contador10 > 0) {
+//         resultado += `${contador10} nota(s) de R$ 10. `
+//     }
+
+//     if (contador5 > 0) {
+//         resultado += `${contador5} nota(s) de R$ 5. `
+//     }
+
+//     if (contador1 > 0) {
+//         resultado += `${contador1} nota(s) de R$ 1. `
+//     }
+//     return resultado
+// }
+
+// console.log(sacarDinheiro(7))
+
+// 21) Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade do conveniado
+// considerando que todos pagam R$ 100 mais um adicional conforme a seguinte tabela: 1) crianças com menos
+// de 10 anos pagam R$80; 2) conveniados com idade entre 10 e 30 anos pagam R$50; 3) conveniados com
+// idade acima de 30 e até 60 anos pagam R$ 95; e 4) conveniados acima de 60 anos pagam R$130
+// function identificaValorPlanoSaude(idade) {
+//     let valorPlano = 100
+//     if(idade < 10) {
+//         valorPlano += 80
+//         return `Crianças abaixo de 10 anos pagam R$100 fixos mais um adicional de R$80, totalizando R$${valorPlano}`
+//     } else if (idade >= 10 && idade <= 30) {
+//         valorPlano += 50
+//         return `conveniados com idade entre 10 e 30 anos pagam R$100 fixos mais um adicional de R$50, totalizando R$${valorPlano}`
+//     } else if (idade > 30 && idade <= 60) {
+//         valorPlano += 95
+//         return `conveniados com idade acima de 30 e até 60 anos pagam R$100 fixos mais um adicional de R$95, totalizando R$${valorPlano}`
+//     } else if(idade > 60) {
+//         valorPlano += 130
+//         return `conveniados com idade acima 60 anos pagam R$100 fixos mais um adicional de R$130, totalizando R$${valorPlano}`
+//     }
+// }
+// console.log(identificaValorPlanoSaude(80))
+
+// 22) Criar uma função para calcular o valor a ser pago de anuidade de uma associação. A função recebe como
+// parâmetro um inteiro que representa o mês (1 - janeiro, 2 - fevereiro…) que foi paga e o valor da anuidade. A
+// anuidade deve ser paga no mês de janeiro. Por mês, é cobrado 5% de juros (sob o regime de juros
+// compostos). O retorno deve ser o valor a ser pago para o respectivo mês escolhido.
+// function calculaAnuidade(mes, anuidade) {
+//     let anuidadeAtualizada = anuidade
+//     let taxJuros = 0.05
+//     let qtdeMeses = 0
+//     switch(mes) {
+//         case 1: case 01:
+//             return `O valor da anuidada a ser pago no mês de Janeiro é de R$${anuidade}`
+//             break
+//         case 2: case 02:
+//             qtdeMeses = 1
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Fevereiro é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 3: case 03:
+//             qtdeMeses = 2
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Março é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 4: case 04:
+//             qtdeMeses = 3
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Abril é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 5: case 05:
+//             qtdeMeses = 4
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Maio é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 6: case 06:
+//             qtdeMeses = 5
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Junho é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 7: case 07:
+//             qtdeMeses = 6
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Julho é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 8: case 08:
+//             qtdeMeses = 7
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Agosto é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 9: case 09:
+//             qtdeMeses = 8
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Setembro é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 10: case 10:
+//             qtdeMeses = 9
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Outubro é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 11: case 11:
+//             qtdeMeses = 10
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Novembro é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//         case 12: case 12:
+//             qtdeMeses = 11
+//             anuidadeAtualizada = anuidade * Math.pow((1 + taxJuros), qtdeMeses)
+//             return `O valor da anuidada a ser pago no mês de Dezembro é de R$${anuidadeAtualizada.toFixed(2)}`
+//             break
+//     }
+// }
+
+// console.log(calculaAnuidade(2, 588))
+
+// 23) Escreva um algoritmo que leia o código de um aluno e suas três notas. Calcule a média ponderada do
+// aluno, considerando que o peso para a maior nota seja 4 e para as duas restantes, 3. Mostre o código do
+// aluno, suas três notas, a média calculada e uma mensagem "APROVADO" se a média for maior ou igual a 5 e
+// "REPROVADO" se a média for menor que 5. Repita a operação até que o código lido seja negativo.
+// function calculaMedia(codAluno, nota1, nota2, nota3) {
+//     let notaMaior = 0
+//     let notaMenor1 = 0
+//     let notamenor2 = 0
+//     let mediaFinal = 0
+//     let resultadoFinal = ""
+//     if (nota1 > nota2 && nota1 > nota3) {
+//         notaMaior = nota1
+//         notaMenor1 = nota2
+//         notamenor2 = nota3
+//     } else if( nota2 > nota3 && nota2 > nota1) {
+//         notaMaior = nota2
+//         notaMenor1 = nota1
+//         notamenor2 = nota3
+//     } else if( nota3 > nota1 && nota3 > nota2) {
+//         notaMaior = nota3
+//         notaMenor1 = nota1
+//         notamenor2 = nota2
+//     }
+//     notaMaior *= 4
+//     notaMenor1 *= 3
+//     notamenor2 *= 3
+//     mediaFinal = (notaMaior + notaMenor1 + notamenor2) / 10
+
+//     if(mediaFinal >= 5) {
+//         resultadoFinal = "APROVADO"
+//     } else {
+//         resultadoFinal = "REPROVADO"
+//     }
+
+//     return `Código do aluno: ${codAluno} - Nota 1: ${nota1} - Nota 2: ${nota2} - Nota 3: ${nota3}; Média calculada: ${mediaFinal.toFixed(2)} ALUNO ${resultadoFinal}.`
+// }
+
+// function getInteiroAleatorioEntre(min, max) {
+//     const valor = Math.random() * (max - min) + min
+//     return Math.floor(valor)
+// }
+
+// do {
+//     codAluno = getInteiroAleatorioEntre(-1, 10)
+//     nota1 = getInteiroAleatorioEntre(1, 10)
+//     nota2 = getInteiroAleatorioEntre(1, 10)
+//     nota3 = getInteiroAleatorioEntre(1, 10)
+//     console.log(calculaMedia(codAluno, nota1, nota2, nota3))
+// } while (codAluno != -1) 
+
+// 24) Crie um programa que imprima 11 vezes a frase " Hello World!" utilizando uma estrutura de repetição while.
+// let contador = 0
+// while(contador < 11) {
+//     console.log(contador + 1," Hello World!")
+//     contador++
+// }
+
+// 25) Escrever um programa para exibir os números de 1 até 50 na tela.
+// let numero = 1
+// while(numero <= 50) {
+//     console.log(numero)
+//     numero++
+// }
+// 26) Fazer um programa para encontrar todos os pares entre 1 e 100.
+// let numero = 1
+// while(numero <= 100) {
+//     if(numero % 2 === 0) {
+//         console.log(numero)
+//         numero++
+//     } else {
+//         numero++
+//     }
+// }
+
+// 27) Construa uma função que receba como parâmetros as alturas e as taxas de crescimento anuais de duas
+// crianças e calcule se existe uma criança menor, caso exista se a criança menor ultrapassará a maior e em
+// quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.
+function calcAltura( altura1, taxaDeCrescimento1, altura2, taxaDeCrescimento2) {
+    let criançaMenor
+    let contadorAnos = 0
+    if(altura1 < altura2) {
+        criançaMenor = altura1
+        if(taxaDeCrescimento1 > taxaDeCrescimento2) {
+        while (altura1 <= altura2) {
+            altura1 += taxaDeCrescimento1
+            altura2 += taxaDeCrescimento2
+            contadorAnos++
+        }
+    } else {
+        return "A criaça menor nunca ultrapassará a criança maior."
+    }
+    } else if (altura2 < altura1) {
+        criançaMenor = altura2
+    } else {
+        return "Alturas iguais."
+    }
+}

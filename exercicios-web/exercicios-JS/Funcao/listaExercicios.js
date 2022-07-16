@@ -696,23 +696,99 @@
 // 27) Construa uma função que receba como parâmetros as alturas e as taxas de crescimento anuais de duas
 // crianças e calcule se existe uma criança menor, caso exista se a criança menor ultrapassará a maior e em
 // quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.
-function calcAltura( altura1, taxaDeCrescimento1, altura2, taxaDeCrescimento2) {
-    let criançaMenor
-    let contadorAnos = 0
-    if(altura1 < altura2) {
-        criançaMenor = altura1
-        if(taxaDeCrescimento1 > taxaDeCrescimento2) {
-        while (altura1 <= altura2) {
-            altura1 += taxaDeCrescimento1
-            altura2 += taxaDeCrescimento2
-            contadorAnos++
-        }
-    } else {
-        return "A criaça menor nunca ultrapassará a criança maior."
-    }
-    } else if (altura2 < altura1) {
-        criançaMenor = altura2
-    } else {
-        return "Alturas iguais."
-    }
-}
+// function calcAltura( altura1, taxaDeCrescimento1, altura2, taxaDeCrescimento2) {
+//     let criançaMenor
+//     let contadorAnos = 0
+
+//     if(altura1 < altura2) {
+//         criançaMenor = altura1
+
+//         if(taxaDeCrescimento1 > taxaDeCrescimento2) {
+//             while (altura1 <= altura2) {
+//             altura1 += taxaDeCrescimento1
+//             altura2 += taxaDeCrescimento2
+//             contadorAnos++
+//             }
+//             return `A criança menor ultrapassara a maior em ${contadorAnos} anos, a criança menor terá ${altura1.toFixed(2)}cm e a outra terá ${altura2.toFixed(2)}cm`
+//         } else {
+//             return "A criaça menor nunca ultrapassará a criança maior."
+//         }
+//     } else if (altura2 < altura1) {
+//         criançaMenor = altura2
+//         if(taxaDeCrescimento2 > taxaDeCrescimento1) {
+//             while (altura2 <= altura1) {
+//             altura1 += taxaDeCrescimento1
+//             altura2 += taxaDeCrescimento2
+//             contadorAnos++
+//             }
+//             return `A criança menor ultrapassara a maior em ${contadorAnos} anos, a criança menor terá ${altura2.toFixed(2)}cm e a outra terá ${altura1.toFixed(2)}cm`
+//         } else {
+//             return "A criaça menor nunca ultrapassará a criança maior."
+//         }
+        
+
+//     } else {
+//         return "Alturas iguais."
+//     }
+// }
+
+// console.log(calcAltura(115, 12, 113, 12.1))
+
+// 28) Ler um vetor de números inteiros e imprimir quantos são pares e quantos são ímpares.
+// function contaParesVetor(vetorNum =[]) {
+//     let contadorPares = 0
+//     for (let i = 0; i < vetorNum.length; i++) {
+//         if (vetorNum[i] % 2 === 0) {
+//         contadorPares++
+//         }
+//     }
+//     return `Existem ${contadorPares} números pares neste vetor informado.`
+// }
+// console.log(contaParesVetor([1, 2, 3, 4, 5, 6, 7, 8, 2, 8, 6, 12]))
+
+// 29) Utilizando a estrutura de repetição for, faça uma função que percorra um vetor e conte quantos números
+// deste vetor estão no intervalo [10,20] (repare que o intervalo é fechado, ou seja, inclui o 10 e o 20) e quantos
+// deles estão fora do intervalo, escrevendo estas informações.
+// function contaIntervalos(vetorNum = []) {
+//     let conta10E20 = 0
+//     let contaFora = 0
+//     for(let i = 0; i < vetorNum.length; i++) {
+//         if( vetorNum[i] === 10 || vetorNum[i] === 20) {
+//             conta10E20++
+//         } else {
+//             contaFora++
+//         }
+//     }
+//     return `No vetor informado ${conta10E20} número(s) estão no intervalo [10, 20] e ${contaFora} número(s) estão fora deste intervalo`
+// }
+
+// console.log(contaIntervalos([10, 10, 20, 10, 1]))
+
+// 30) Escreva um algoritmo que percorre um vetor de inteiros e defina o maior e menor valor dentro do vetor.
+
+// function contaVetor(vetorNum = []) {
+//     let maiorNum = vetorNum[0]
+//     let menorNum = vetorNum[0]
+//     for(let i = 0; i < vetorNum.length; i++) {
+//         if (vetorNum[i] > maiorNum) {
+//             maiorNum = vetorNum[i]
+//         } else if(vetorNum[i] < menorNum) {
+//             menorNum = vetorNum[i]
+//         }
+//     }
+//     return `O menor valor encontrado no vetor foi ${menorNum} e o maior foi ${maiorNum}.`
+// }
+// console.log(contaVetor([1, 2, 3, 4, 5, 9, 0]))
+
+// 31) Escrever um algoritmo que percorre um vetor de inteiros, conta quantos números negativos há nesse vetor
+// e imprime a quantidade no console.
+// function percorreVetor(vetorNum = []) {
+//     let negativos = 0
+//     for(let i = 0; i < vetorNum.length; i++) {
+//         if(vetorNum[i] < 0) {
+//             negativos++
+//         }
+//     }
+//     return `Contei ${negativos} número(s) negativo(s) neste vetor.`
+// }
+// console.log(percorreVetor([-1, -2, 3, -4, 5, -6, 7, 8, -9, 41, -55]))

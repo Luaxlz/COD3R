@@ -1,0 +1,1 @@
+// Um objeto é uma coleção dinamica de pares chave/valor.

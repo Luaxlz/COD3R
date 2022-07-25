@@ -23,5 +23,10 @@ console.log(pessoa)
 //Object.freeze
 //Impede adição e remoção de atributos assim como a modificação dos mesmos.
 const prod1 = {
-    
+    nome: "Cadeira",
+    preco: 5.99
 }
+Object.freeze(prod1)
+prod1.nome = "pipoca"
+delete prod1.preco
+console.log(prod1)

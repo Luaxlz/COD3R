@@ -247,3 +247,36 @@
 // const getMedia = array => array.reduce(somaArray) / array.length
 // console.log(getMedia([0, 10]))
 // console.log(getMedia([1, 2, 3, 4, 5]))
+
+// Faça uma função que recebe a base e a altura de um triângulo e retorne a área desse triângulo. A precisão deverá ser de duas casas decimais, arredondando se necessário.
+// const calculaAreaTriangulo = (base, altura) => {
+//     let area = (base * altura) / 2
+//     return `A área deste triangulo é ${area.toFixed(2)}m2`
+// }
+// console.log(calculaAreaTriangulo(10, 15))
+// console.log(calculaAreaTriangulo(7, 9))
+// console.log(calculaAreaTriangulo(9.25, 13.1))
+
+// Criar uma função que receba um array de números e retorne o menor número desse array.
+// const encontraMenor = array => {
+//     let menorElemento = array[0]
+//     for(let i = 0; i < array.length; i++) {
+//         if(menorElemento > array[i]) {
+//             menorElemento = array[i]
+//         }
+//     }
+//     return menorElemento
+// }
+// console.log(encontraMenor([10, 5, 35, 65]))
+// console.log(encontraMenor([5, -15, 50, 3]))
+
+// Desenvolva uma função que receba como parâmetro um número de 1 a 10. Internamente, na função, será gerado um número aleatório de 1 a 10. A função deverá retornar se o parâmetro de entrada foi igual ao número sorteado internamente. Se o valor fornecido foi o sorteado, retorne "Parabéns! O número sorteado foi o Х". Se não for igual, retorne "Que pena! O número sorteado foi o Х". Х é o número que foi sorteado.
+const geraRandom = () => Math.floor(Math.random() * (10 - 1)) + 1
+console.log(valor)
+
+const comparaInput = num => {
+    valor = geraRandom()
+    if(num >= 1 && num <= 10) {
+        if(num === valor)
+    }
+}

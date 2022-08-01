@@ -309,3 +309,60 @@
 //     return `O caracter ${caracter} se repete ${contador} vezes na frase informada.`
 // }
 // console.log(contaRepeticoes('m', 'Ontem a noite fiz um miojo bem top!'))
+
+// A fim de criar um mecanismo de busca para sua aplicação, você precisa iniciar criando uma função para identificar palavras semelhantes.
+// Escreva uma função que recebe como primeiro parâmetro uma palavra e, como segundo parâmetro, um array de strings. A função deverá filtrar as palavras do array que contêm nelas a string do primeiro parâmetro.
+// function buscarPalavrasSemelhantes(inicio, palavras) {
+//     return palavras.filter(palavra => palavra.includes(inicio))
+//     }
+// console.log(buscarPalavrasSemelhantes('Ass', ['Assassins', 'Assado', 'Frango']))
+
+// Desenvolva uma função que receba uma frase como parâmetro e retorne essa string somente com as consoantes, ou seja, sem as vogais.
+// const removeVogais = frase => frase.replace(/[aeiouà-ú]/gi,'')
+// console.log(removeVogais('Olá, mundo!'))
+
+// Desenvolva uma função que recebe um objeto como parâmetro e retorne um outro objeto que corresponde ao ao objeto recebido como parâmetro, porém com as posições das chaves e valores invertidas, conforme exemplo a seguir:
+// const inverterObjeto = objeto => {
+//     const chaveValorInvertido = Object.entries(objeto). map(parChaveValor => parChaveValor.reverse())
+//     return Object.fromEntries(chaveValorInvertido)
+// }
+// console.log(inverterObjeto({a: 1, b: 2, c: 3}))
+
+// Elabore uma função que recebe dois parâmetros: o primeiro é um array de números e o segundo é um número que especifica uma quantidade de dígitos. Essa função deverá retornar somente aqueles números do array que têm a quantidade de dígitos indicada pelo segundo parâmetro.
+// const retornaSelecionados = (arrayNumeros, digitos) => {
+//     let resultado = arrayNumeros.filter(e => {
+//         if(String(e).length === digitos) {
+//             return e
+//         }
+//     })
+//     return resultado
+// }
+// console.log(retornaSelecionados([38, 2, 365, 10, 125, 11], 2))
+// console.log(retornaSelecionados([5, 9, 1, 125, 11], 1))
+
+// Crie uma função que recebe um array de números e retorna o segundo maior número presente nesse array
+// const encontraSegundo = arrayNum => {
+//     arrayNum.sort((a, b) => a - b)
+//     arrayNum.reverse()
+//     return arrayNum[1]
+// }
+// console.log(encontraSegundo([12, 16, 1, 5]))
+// console.log(encontraSegundo([8, 4, 5, 6]))
+
+// Elabore uma função que recebe um objeto com estudantes e suas notas. As notas de cada estudante estarão num array, conforme exemplo abaixo. Você deverá calcular a média da nota de cada aluno e retornar um objeto com os atributos nome e media, que indica o aluno que teve o melhor desempenho nas notas.
+// const soma = array => array.reduce((acumulador, atual) => acumulador + atual, 0)
+// const media = array => soma(array) / array.length
+// const getMelhorEstudante = estudantes => {
+//     const estudantesComMedias = Object.entries(estudantes).map(estudante => {
+//         const chave = 0,
+//               valor = 1
+//         return {nome: estudante[chave], media: media(estudante[valor])}
+//     })
+//     const estudantesOrdenados = estudantesComMedias.sort((estudanteA, estudanteb) => estudanteb.media - estudanteA.media)
+//     return estudantesOrdenados[0]
+// }
+// console.log(getMelhorEstudante({
+//     Joao: [8, 7.6, 8.9, 6], // média 7.625
+//     Mariana: [9, 6.6, 7.9, 8], // média 7.875
+//     Carla: [7, 7, 8, 9] // média 7.75
+//     })) // retornará { nome: "Mariana", media: 7.875 }

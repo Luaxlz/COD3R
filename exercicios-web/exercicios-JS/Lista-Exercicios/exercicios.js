@@ -271,12 +271,41 @@
 // console.log(encontraMenor([5, -15, 50, 3]))
 
 // Desenvolva uma função que receba como parâmetro um número de 1 a 10. Internamente, na função, será gerado um número aleatório de 1 a 10. A função deverá retornar se o parâmetro de entrada foi igual ao número sorteado internamente. Se o valor fornecido foi o sorteado, retorne "Parabéns! O número sorteado foi o Х". Se não for igual, retorne "Que pena! O número sorteado foi o Х". Х é o número que foi sorteado.
-const geraRandom = () => Math.floor(Math.random() * (10 - 1)) + 1
-console.log(valor)
+// const geraRandom = () => Math.floor(Math.random() * (10 - 1)) + 1
+// const comparaInput = num => {
+//     valor = geraRandom()
+//     if(num >= 1 && num <= 10) {
+//         if(num === valor) {
+//             return `Parabéns! O numero sorteador foi ${valor}.`
+//         } else {
+//             return `Que pena! O numero sorteado foi ${valor}`
+//         }
+//     } else {
+//         return `Número informado inválido.`
+//     }
+// }
+// console.log(comparaInput(1))
+// console.log(comparaInput(10))
+// console.log(comparaInput(5))
+// console.log(comparaInput(115))
 
-const comparaInput = num => {
-    valor = geraRandom()
-    if(num >= 1 && num <= 10) {
-        if(num === valor)
-    }
-}
+// Criar uma função que receba uma string como parâmetro e conte quantas palavras tem nela.
+// const contarPalavras = frase => {
+//     let arrayFrase = frase.split(' ')
+//     return `Essa frase possui ${arrayFrase.length} palavras.`
+// }
+
+// console.log(contarPalavras('Esta é uma frase olha que maneiro né?!'))
+
+// Desenvolva uma função que recebe um caractere e uma string como parâmetros e retorne a quantidade de vezes que o caractere se repete na string. A função deverá ser case-sensitive, ou seja, irá diferenciar maiúsculas de minúsculas.
+// const contaRepeticoes = (caracter, frase) => {
+//     let arrayFrase = frase.split('')
+//     let contador = 0
+//     for( let i = 0; i < arrayFrase.length; i++){
+//         if( caracter === arrayFrase[i]) {
+//             contador++
+//         }
+//     }
+//     return `O caracter ${caracter} se repete ${contador} vezes na frase informada.`
+// }
+// console.log(contaRepeticoes('m', 'Ontem a noite fiz um miojo bem top!'))

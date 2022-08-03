@@ -17,7 +17,18 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('div ul[destino="escritório"]') // O ideal aqui é utilizar o id #compras porém para fins didáticos usaremos um seletor mais específico.
+        console.log('Elemento UL..........')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttribute destino', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa')
+        lista.setAttribute('status', 'aberto')
+        lista.removeAttribute('destino')
+        lista.setAttribute('data-blabla', 'Opa')
+        console.log(lista.dataset)
+
     </script>
 </body>
 

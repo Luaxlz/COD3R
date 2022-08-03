@@ -28,6 +28,14 @@
         lista.removeAttribute('destino')
         lista.setAttribute('data-blabla', 'Opa')
         console.log(lista.dataset)
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+        
+        //cuidado, nem sempre o atributo que está definido no HTML estará disponível para você acessar com o mesmo nome.
+        const label = documento.querySelector('label')
+        label.for
+        console.log(label.htmlfor)
+        console.log(label.getAttribute('for'))
 
     </script>
 </body>

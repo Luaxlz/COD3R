@@ -10,7 +10,7 @@ const carrinho = [
 let resultado = []
 resultado = carrinho.map(function(e, i) {
     return resultado[i] = JSON.parse(carrinho[i])
-}).map(e => e.preco)
+})//.map(e => e.preco)
 
 
 

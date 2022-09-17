@@ -1,0 +1,19 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "Esta é uma descrição",
+  "main": "outro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "palavra",
+    "tal",
+    "palavraTal"
+  ],
+  "author": "Lucas Angeli",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

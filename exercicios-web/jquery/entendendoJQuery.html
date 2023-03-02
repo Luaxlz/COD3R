@@ -16,14 +16,14 @@
     <script>
         $('div').hide(5000).show(5000).fadeOut(5000)
         console.log($('div').get(0))
-        console.log($.isEmptyObject({}))
+        console.log($.isEmptyObject({nome: null}))
         console.log(jQuery.inArray(3, [1, 2, 3]))
 
-        $.fn.fundoVerde = function() {
+        $.fn.fundoVerde = function () {
             this.css('background-color', 'green')
             return this
         }
 
-        $('body').fundoVerde().fadeOut(1000)
+        $('body').fundoVerde().hide(2000)
     </script>
 </body>

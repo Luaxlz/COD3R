@@ -13,22 +13,13 @@
     <div id='conteudo'></div>
 
     <script>
-        $(document).ready(function() { //Função para esperar toda a DOM ser carregada
-            const pessoas = [ //Constante que armazena um array de objetos
-                { nome: 'Ana', nota: 9.1 },
-                { nome: 'Bianca', nota: 8.4 },
-                { nome: 'Carlos', nota: 7.6 },
-                { nome: 'Julia', nota: 9.7 }
-            ]
-
-            const linhas = pessoas.map(p => { //Mapeando o array de objetos
-                const tdNome = $('<td>').html(p.nome) //Armazenando o nome do objeto em uma constante junto de um novo elemento da dom <td>
-                const tdNota = $('<td>').html(p.nota) //Armazenando o preço do objeto em uma constante junto de um novo elemento da dom <td>
-                return $('<tr>').append(tdNome, tdNota) //retornando um elemento <tr> já appendado com nome e preço
-            })
-            const tabela = $('<table>').append(linhas) //criando um novo elemento <table> já appendando as linhas e os TRs
-            $('#conteudo').append(tabela) //Appendando a tabela na div #conteudo
-            
-        })
+        const pessoas = [
+            { nome: 'Ana', nota: 9.1 },
+            { nome: 'Bianca', nota: 8.4 },
+            { nome: 'Carlos', nota: 7.6 },
+            { nome: 'Julia', nota: 9.7 }
+        ]
+        
+        // ...
     </script>
 </body>
